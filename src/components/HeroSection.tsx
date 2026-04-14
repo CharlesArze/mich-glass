@@ -1,100 +1,107 @@
-const VIDEO_SRC =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260306_074215_04640ca7-042c-45d6-bb56-58b1e8a42489.mp4";
+import { motion } from "motion/react";
+import { ArrowUpRight, Play } from "lucide-react";
+import BlurText from "./BlurText";
 
-const navLinks = ["Work", "Services", "About", "Blog", "Contact"];
+const HERO_VIDEO =
+  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4";
 
-const CornerAccent = ({ className }: { className: string }) => (
-  <span className={`absolute w-[7px] h-[7px] bg-foreground ${className}`} />
-);
+const partners = ["Stripe", "Vercel", "Linear", "Notion", "Figma"];
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden font-barlow">
-      {/* Background Video */}
+    <section className="relative overflow-visible" style={{ height: 1000 }}>
+      {/* Background video */}
       <video
-        className="absolute inset-0 h-full w-full object-cover"
-        src={VIDEO_SRC}
+        className="absolute left-0 w-full h-auto object-contain z-0"
+        style={{ top: "20%" }}
+        src={HERO_VIDEO}
         autoPlay
         loop
         muted
         playsInline
       />
 
-      {/* Content Layer */}
-      <div className="relative z-10 flex h-full flex-col">
-        {/* Navigation */}
-        <nav className="flex items-center justify-between px-10 py-6">
-          <span className="text-xl font-semibold tracking-tight text-foreground">
-            STUDIO
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/5 z-0" />
+
+      {/* Bottom gradient */}
+      <div
+        className="absolute bottom-0 left-0 right-0 z-[1] pointer-events-none"
+        style={{
+          height: 300,
+          background: "linear-gradient(to bottom, transparent, black)",
+        }}
+      />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col items-center h-full" style={{ paddingTop: 150 }}>
+        {/* Badge */}
+        <div className="liquid-glass rounded-full px-1 py-1 flex items-center gap-2 mb-8">
+          <span className="bg-white text-black rounded-full px-3 py-1 text-xs font-semibold font-body">
+            New
           </span>
-          <ul className="hidden items-center gap-8 md:flex">
-            {navLinks.map((link) => (
-              <li key={link}>
-                <a
-                  href={`#${link.toLowerCase()}`}
-                  className="text-sm font-medium text-foreground transition-colors hover:bg-white/10 rounded px-3 py-1.5"
-                >
-                  {link}
-                </a>
-              </li>
-            ))}
-          </ul>
+          <span className="text-white text-xs font-medium font-body pr-3">
+            Introducing AI-powered web design.
+          </span>
+        </div>
+
+        {/* Heading */}
+        <BlurText
+          text="The Website Your Brand Deserves"
+          delay={100}
+          className="text-6xl md:text-7xl lg:text-[5.5rem] font-heading italic text-white leading-[0.8] max-w-2xl tracking-[-4px] text-center justify-center"
+        />
+
+        {/* Subtext */}
+        <motion.p
+          initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+          animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+          transition={{ delay: 0.8, duration: 0.6 }}
+          className="mt-6 text-sm md:text-base text-white font-body font-light leading-tight max-w-md text-center"
+        >
+          Stunning design. Blazing performance. Built by AI, refined by experts.
+          This is web design, wildly reimagined.
+        </motion.p>
+
+        {/* CTA Buttons */}
+        <motion.div
+          initial={{ filter: "blur(10px)", opacity: 0, y: 20 }}
+          animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+          transition={{ delay: 1.1, duration: 0.6 }}
+          className="mt-8 flex items-center gap-4"
+        >
           <a
-            href="#contact"
-            className="hidden rounded-[2px] bg-[#f8f8f8] px-5 py-2 text-sm font-medium text-[#171717] transition-colors hover:bg-white md:inline-block"
+            href="#get-started"
+            className="liquid-glass-strong rounded-full px-5 py-2.5 text-sm font-medium text-white font-body flex items-center gap-2 transition-colors hover:bg-white/10"
           >
-            Get in Touch
+            Get Started
+            <ArrowUpRight size={16} />
           </a>
-        </nav>
+          <a
+            href="#film"
+            className="flex items-center gap-2 text-sm font-medium text-white font-body transition-colors hover:text-white/80"
+          >
+            <Play size={14} fill="white" />
+            Watch the Film
+          </a>
+        </motion.div>
 
-        {/* Hero Content */}
-        <div className="flex flex-1 flex-col items-center justify-end pb-[250px]">
-          {/* Fortune Badge */}
-          <div className="mb-10 rounded-full bg-white/10 px-1 py-1 backdrop-blur-sm">
-            <div className="rounded-full bg-white/90 px-5 py-1.5 backdrop-blur-md">
-              <span className="text-xs font-medium tracking-wide text-[#171717]">
-                ✦ Featured in Fortune
-              </span>
-            </div>
+        {/* Partners */}
+        <div className="mt-auto pb-8 pt-16 flex flex-col items-center gap-6">
+          <div className="liquid-glass rounded-full px-3.5 py-1">
+            <span className="text-xs font-medium text-white font-body">
+              Trusted by the teams behind
+            </span>
           </div>
-
-          {/* Headline container with corner accents */}
-          <div className="relative px-8 py-6">
-            <CornerAccent className="top-0 left-0" />
-            <CornerAccent className="top-0 right-0" />
-            <CornerAccent className="bottom-0 left-0" />
-            <CornerAccent className="bottom-0 right-0" />
-
-            <h1 className="text-center">
-              <span className="block text-[64px] font-light leading-tight text-foreground">
-                Agency that makes your
+          <div className="flex items-center gap-12 md:gap-16 flex-wrap justify-center">
+            {partners.map((name) => (
+              <span
+                key={name}
+                className="text-2xl md:text-3xl font-heading italic text-white"
+              >
+                {name}
               </span>
-              <span className="block font-instrument text-[64px] italic leading-tight text-foreground">
-                videos &amp; reels viral
-              </span>
-            </h1>
-          </div>
-
-          {/* Sub-headline */}
-          <p className="mt-6 max-w-lg text-center text-base leading-relaxed text-foreground/75">
-            We craft scroll-stopping content that drives millions of organic
-            views, turning brands into cultural conversations.
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="mt-8 flex gap-4">
-            <a
-              href="#work"
-              className="rounded-[2px] bg-[#f8f8f8] px-7 py-3 text-sm font-medium text-[#171717] transition-colors hover:bg-white"
-            >
-              View Our Work
-            </a>
-            <a
-              href="#services"
-              className="rounded-[2px] border border-white/20 px-7 py-3 text-sm font-medium text-foreground transition-colors hover:bg-white/10"
-            >
-              Our Services
-            </a>
+            ))}
           </div>
         </div>
       </div>
