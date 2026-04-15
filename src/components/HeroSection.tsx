@@ -2,8 +2,7 @@ import { motion } from "motion/react";
 import { ArrowUpRight, Play } from "lucide-react";
 import BlurText from "./BlurText";
 
-const HERO_VIDEO =
-  "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260307_083826_e938b29f-a43a-41ec-a153-3d4730578ab8.mp4";
+const HERO_VIDEO = "/video/less_cloud_motion_202604141850.mp4";
 
 const partners = ["Stripe", "Vercel", "Linear", "Notion", "Figma"];
 
