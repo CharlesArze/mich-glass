@@ -4,7 +4,7 @@ import BlurText from "./BlurText";
 
 const HERO_VIDEO = "/video/less_cloud_motion_202604141850.mp4";
 
-const partners = ["Stripe", "Vercel", "Linear", "Notion", "Figma"];
+const partners = ["Stripe", "Vercel", "Linear", "Notion", "Figma"] as const;
 
 const HeroSection = () => {
   return (
@@ -37,16 +37,16 @@ const HeroSection = () => {
         {/* Badge */}
         <div className="liquid-glass rounded-full px-1 py-1 flex items-center gap-2 mb-8">
           <span className="bg-white text-black rounded-full px-3 py-1 text-xs font-semibold font-body">
-            New
+            Nuevo
           </span>
           <span className="text-white text-xs font-medium font-body pr-3">
-            Introducing AI-powered web design.
+            Libros nuevos y usados con envíos gratis en Arequipa.
           </span>
         </div>
 
         {/* Heading */}
         <BlurText
-          text="The Website Your Brand Deserves"
+          text="Tu portal a nuevas historias"
           delay={100}
           className="text-6xl md:text-7xl lg:text-[5.5rem] font-heading italic text-white leading-[0.8] max-w-2xl tracking-[-4px] text-center justify-center"
         />
@@ -58,8 +58,7 @@ const HeroSection = () => {
           transition={{ delay: 0.8, duration: 0.6 }}
           className="mt-6 text-sm md:text-base text-white font-body font-light leading-tight max-w-md text-center"
         >
-          Stunning design. Blazing performance. Built by AI, refined by experts.
-          This is web design, wildly reimagined.
+          Donde los libros continúan su viaje, y tú comienzas uno nuevo.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -73,15 +72,15 @@ const HeroSection = () => {
             href="#get-started"
             className="liquid-glass-strong rounded-full px-5 py-2.5 text-sm font-medium text-white font-body flex items-center gap-2 transition-colors hover:bg-white/10"
           >
-            Get Started
+            Explorar librería
             <ArrowUpRight size={16} />
           </a>
           <a
-            href="#film"
+            href="#about"
             className="flex items-center gap-2 text-sm font-medium text-white font-body transition-colors hover:text-white/80"
           >
             <Play size={14} fill="white" />
-            Watch the Film
+            Conocer más
           </a>
         </motion.div>
 

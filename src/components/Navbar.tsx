@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 
-const navLinks = ["Home", "Services", "Work", "Process", "Pricing"];
+const navLinks = ["Inicio", "Servicios", "Catálogo", "Nosotros", "Perfil"];
 
 const Navbar = () => {
   return (
@@ -27,7 +27,7 @@ const Navbar = () => {
           href="#get-started"
           className="flex items-center gap-1 bg-white text-black rounded-full px-3.5 py-1.5 text-sm font-medium font-body transition-colors hover:bg-white/90"
         >
-          Get Started
+          Explorar librería
           <ArrowUpRight size={14} />
         </a>
       </div>
