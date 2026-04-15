@@ -12,7 +12,7 @@ const HeroSection = () => {
       {/* Background video */}
       <video
         className="absolute left-0 w-full h-auto object-contain z-0"
-        style={{ top: "20%" }}
+        style={{ top: "45%" }}
         src={HERO_VIDEO}
         autoPlay
         loop
