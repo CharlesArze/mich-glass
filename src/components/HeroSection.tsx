@@ -85,7 +85,7 @@ const HeroSection = () => {
         </motion.div>
 
         {/* Partners */}
-        <div className="mt-auto pb-8 pt-16 flex flex-col items-center gap-6">
+        <div className="mt-8 flex flex-col items-center gap-6">
           <div className="liquid-glass rounded-full px-3.5 py-1">
             <span className="text-xs font-medium text-white font-body">
               MICH Bookstore
