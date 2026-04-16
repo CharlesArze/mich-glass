@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 import { ArrowUpRight, Play } from "lucide-react";
 import BlurText from "./BlurText";
 
-const HERO_VIDEO = "/video/less_cloud_motion_202604141850.mp4";
+const HERO_VIDEO = "/video/tableromierda.m4v";
 
 
 
