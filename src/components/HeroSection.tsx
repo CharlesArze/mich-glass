@@ -4,7 +4,7 @@ import BlurText from "./BlurText";
 
 const HERO_VIDEO = "/video/less_cloud_motion_202604141850.mp4";
 
-const partners = ["Stripe", "Vercel", "Linear", "Notion", "Figma"] as const;
+
 
 const HeroSection = () => {
   return (
@@ -86,21 +86,9 @@ const HeroSection = () => {
 
         {/* Partners */}
         <div className="mt-auto pb-8 pt-16 flex flex-col items-center gap-6">
-          <div className="liquid-glass rounded-full px-3.5 py-1">
-            <span className="text-xs font-medium text-white font-body">
-              Trusted by the teams behind
-            </span>
-          </div>
-          <div className="flex items-center gap-12 md:gap-16 flex-wrap justify-center">
-            {partners.map((name) => (
-              <span
-                key={name}
-                className="text-2xl md:text-3xl font-heading italic text-white"
-              >
-                {name}
-              </span>
-            ))}
-          </div>
+          <span className="text-4xl md:text-5xl font-heading italic text-white">
+            MICH Bookstore
+          </span>
         </div>
       </div>
     </section>
