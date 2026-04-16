@@ -3,7 +3,7 @@ const VideoShowcase = () => {
     <section className="relative w-full overflow-hidden" style={{ height: "500px" }}>
       <video
         className="absolute inset-0 w-full h-full object-cover"
-        src="/video/Proyecto sin título.mp4"
+        src="/video/showcase.mp4"
         autoPlay
         loop
         muted
