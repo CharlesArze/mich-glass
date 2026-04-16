@@ -1,21 +1,23 @@
 import { motion } from "motion/react";
-import { BookOpen, Truck, Gift } from "lucide-react";
+import cubImg from "@/assets/cub.png";
+import moonImg from "@/assets/moon.png";
+import slimeeImg from "@/assets/slimee.png";
 
 const features = [
   {
-    icon: BookOpen,
+    image: cubImg,
     title: "Libros nuevos y usados",
     description:
       "Accede a más de 1,200 títulos en distintas condiciones. Cada libro usado pasa por una revisión de calidad antes de publicarse.",
   },
   {
-    icon: Truck,
+    image: moonImg,
     title: "Envío rápido y seguro",
     description:
       "Entregamos en Arequipa en 24–48 horas y a todo el Perú. Empaquetado especial para que tus libros lleguen perfectos.",
   },
   {
-    icon: Gift,
+    image: slimeeImg,
     title: "Envío gratuito",
     description:
       "Todos nuestros pedidos incluyen envío sin costo adicional. Porque lo único en lo que deberías pensar es en tu próxima lectura.",
@@ -51,7 +53,7 @@ const Features = () => {
               transition={{ duration: 0.6, delay: i * 0.1 }}
               className="px-6 py-8 md:py-0 flex flex-col"
             >
-              <feature.icon size={28} className="text-white/70 mb-5" />
+              <img src={feature.image} alt={feature.title} className="w-16 h-16 object-contain mb-5" />
               <h3 className="text-lg font-body font-medium text-white mb-3">
                 {feature.title}
               </h3>
