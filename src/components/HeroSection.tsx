@@ -86,9 +86,11 @@ const HeroSection = () => {
 
         {/* Partners */}
         <div className="mt-auto pb-8 pt-16 flex flex-col items-center gap-6">
-          <span className="text-4xl md:text-5xl font-heading italic text-white">
-            MICH Bookstore
-          </span>
+          <div className="liquid-glass rounded-full px-3.5 py-1">
+            <span className="text-xs font-medium text-white font-body">
+              MICH Bookstore
+            </span>
+          </div>
         </div>
       </div>
     </section>
