@@ -128,7 +128,7 @@ const Registro = () => {
                   value={form.firstName}
                   onChange={set('firstName')}
                   placeholder="Carlos"
-                  className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-sm font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
+                  className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-[16px] font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
                 />
               </div>
               <div>
@@ -138,7 +138,7 @@ const Registro = () => {
                   value={form.lastName}
                   onChange={set('lastName')}
                   placeholder="García"
-                  className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-sm font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
+                  className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-[16px] font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
                 />
               </div>
             </div>
@@ -151,7 +151,7 @@ const Registro = () => {
                 onChange={set('email')}
                 placeholder="carlos@ejemplo.com"
                 autoComplete="email"
-                className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-sm font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
+                className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-[16px] font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
               />
             </div>
 
@@ -164,7 +164,7 @@ const Registro = () => {
                   onChange={set('password')}
                   placeholder="Mínimo 8 caracteres"
                   autoComplete="new-password"
-                  className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 pr-11 py-2.5 text-white text-sm font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
+                  className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 pr-11 py-2.5 text-white text-[16px] font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
                 />
                 <button
                   type="button"

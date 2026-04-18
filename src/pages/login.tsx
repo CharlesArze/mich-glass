@@ -152,7 +152,7 @@ const Login = () => {
                     onChange={set('email')}
                     placeholder="carlos@ejemplo.com"
                     autoComplete="email"
-                    className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-sm font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
+                    className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-[16px] font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
                   />
                 </div>
 
@@ -165,7 +165,7 @@ const Login = () => {
                       onChange={set('password')}
                       placeholder="Tu contraseña"
                       autoComplete="current-password"
-                      className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 pr-11 py-2.5 text-white text-sm font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
+                      className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 pr-11 py-2.5 text-white text-[16px] font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
                     />
                     <button
                       type="button"
@@ -251,7 +251,7 @@ const Login = () => {
                       value={resetEmail}
                       onChange={e => setResetEmail(e.target.value)}
                       placeholder="carlos@ejemplo.com"
-                      className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-sm font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
+                      className="w-full bg-white/[0.07] border border-white/[0.12] rounded-full px-4 py-2.5 text-white text-[16px] font-body placeholder:text-white/25 focus:outline-none focus:border-white/35 transition-colors"
                     />
                   </div>
 
