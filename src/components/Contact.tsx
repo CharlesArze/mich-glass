@@ -3,7 +3,7 @@ import { Mail, Phone, Instagram, Facebook } from "lucide-react";
 
 const Contact = () => {
   return (
-    <section className="bg-black py-24 px-6">
+    <section id="servicios" className="bg-black pt-16 md:pt-24 pb-8 px-6">
       <div className="max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -18,39 +18,27 @@ const Contact = () => {
             Estamos aquí para ayudarte. Escríbenos o llámanos, respondemos a la brevedad.
           </p>
 
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-6">
-            <a
-              href="mailto:hola@michbookstore.com"
-              className="flex items-center gap-2 text-white/70 font-body text-sm hover:text-white transition-colors"
-            >
+          <div className="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6">
+            <a href="mailto:michbookstore@gmail.com"
+              className="flex items-center gap-2 text-white/70 font-body text-sm hover:text-white transition-colors">
               <Mail size={16} />
-              hola@michbookstore.com
+              michbookstore@gmail.com
             </a>
-            <a
-              href="tel:+51999999999"
-              className="flex items-center gap-2 text-white/70 font-body text-sm hover:text-white transition-colors"
-            >
+            <a href="tel:+51903576755"
+              className="flex items-center gap-2 text-white/70 font-body text-sm hover:text-white transition-colors">
               <Phone size={16} />
-              +51 999 999 999
+              +51 903 576 755
             </a>
           </div>
 
-          <div className="mt-8 flex items-center justify-center gap-4">
-            <a
-              href="https://www.instagram.com/michbookstore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="liquid-glass-strong rounded-full px-5 py-2.5 text-sm font-medium text-white font-body flex items-center gap-2 transition-colors hover:bg-white/10"
-            >
+          <div className="mt-6 md:mt-8 flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4">
+            <a href="https://www.instagram.com/mich.bookstore/" target="_blank" rel="noopener noreferrer"
+              className="liquid-glass-strong rounded-full px-5 py-2.5 text-sm font-medium text-white font-body flex items-center gap-2 transition-colors hover:bg-white/10">
               <Instagram size={16} />
-              Síguenos en Instagram
+              @mich.bookstore
             </a>
-            <a
-              href="https://www.facebook.com/michbookstore"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="liquid-glass-strong rounded-full px-5 py-2.5 text-sm font-medium text-white font-body flex items-center gap-2 transition-colors hover:bg-white/10"
-            >
+            <a href="https://www.facebook.com/share/14XQHKan687/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer"
+              className="liquid-glass-strong rounded-full px-5 py-2.5 text-sm font-medium text-white font-body flex items-center gap-2 transition-colors hover:bg-white/10">
               <Facebook size={16} />
               Síguenos en Facebook
             </a>

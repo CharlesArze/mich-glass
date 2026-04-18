@@ -8,6 +8,7 @@ import Reviews from "@/components/Reviews";
 import Merch from "@/components/Merch";
 import Newsletter from "@/components/Newsletter";
 import Contact from "@/components/Contact";
+import CoinVideo from "@/components/CoinVideo";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import WhatsAppFab from "@/components/WhatsAppFab";
@@ -22,10 +23,11 @@ const Index = () => {
       <Features />
       <VideoShowcase />
       <Reviews />
-      <Merch />
-      <Newsletter />
+      {/* <Merch /> */}
       <Contact />
+      <CoinVideo />
       <CallToAction />
+      <Newsletter />
       <Footer />
       <WhatsAppFab />
     </div>

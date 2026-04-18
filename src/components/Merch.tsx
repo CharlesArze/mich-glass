@@ -13,7 +13,7 @@ const Merch = () => {
           <span className="text-xs font-body font-medium text-white/40 uppercase tracking-widest">
             MICH Merch
           </span>
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.9]">
+          <h2 className="mt-4 text-3xl md:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.9] text-balance">
             Para los que viven entre páginas
           </h2>
           <p className="mt-6 text-white/60 font-body font-light text-sm md:text-base max-w-md mx-auto">

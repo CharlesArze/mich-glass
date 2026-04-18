@@ -3,18 +3,20 @@ import { ArrowRight } from "lucide-react";
 
 const CallToAction = () => {
   return (
-    <section className="bg-black py-32 px-6">
+    <section className="relative bg-black pt-8 pb-32 px-6 overflow-hidden">
       <div className="max-w-4xl mx-auto text-center">
+        <div className="glow-spot w-[700px] h-[400px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
+          className="relative z-10"
         >
           <span className="text-xs font-body font-medium text-white/40 uppercase tracking-widest">
             ¿Listo para empezar?
           </span>
-          <h2 className="mt-4 text-4xl md:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.9]">
+          <h2 className="glow-heading mt-4 text-3xl md:text-5xl lg:text-6xl font-heading italic tracking-tight leading-[0.9] text-balance">
             Tu próximo libro favorito está aquí.
           </h2>
           <p className="mt-6 text-white/60 font-body font-light text-sm md:text-base max-w-md mx-auto">
@@ -30,7 +32,7 @@ const CallToAction = () => {
               <ArrowRight size={16} />
             </a>
             <a
-              href="https://wa.me/51999999999"
+              href="https://wa.me/51903576755"
               target="_blank"
               rel="noopener noreferrer"
               className="liquid-glass-strong rounded-full px-6 py-3 text-sm font-medium text-white font-body transition-colors hover:bg-white/10"

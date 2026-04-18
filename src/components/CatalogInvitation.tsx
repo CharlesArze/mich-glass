@@ -3,14 +3,15 @@ import { ArrowRight } from "lucide-react";
 
 const CatalogInvitation = () => {
   return (
-    <section className="bg-black py-32 px-6">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="relative bg-black pt-[calc(4rem+70px)] pb-8 md:py-32 px-6 overflow-hidden">
+      <div className="glow-spot w-[600px] h-[400px] top-0 left-1/2 -translate-x-1/2 -translate-y-1/2" />
+      <div className="max-w-4xl mx-auto text-center relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-heading italic text-white tracking-tight leading-[0.9]"
+          className="glow-heading text-3xl md:text-5xl lg:text-6xl font-heading italic tracking-tight leading-[0.9] text-balance"
         >
           Cada libro tiene su lector esperando.
         </motion.h2>
