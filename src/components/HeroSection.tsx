@@ -44,9 +44,6 @@ const HeroSection = () => {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/5 z-0" />
 
-      {/* Vignette top */}
-      <div className="absolute top-0 left-0 right-0 h-40 pointer-events-none z-[1]"
-        style={{ background: "linear-gradient(to bottom, black, transparent)" }} />
       {/* Vignette bottom */}
       <div className="absolute bottom-0 left-0 right-0 z-[1] pointer-events-none h-[140px] sm:h-[240px] md:h-[350px]"
         style={{ background: "linear-gradient(to bottom, transparent, black)" }} />
