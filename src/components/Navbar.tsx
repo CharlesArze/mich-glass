@@ -6,9 +6,8 @@ import { useAuth } from '@/hooks/useAuth';
 
 const NAV_LINKS = [
   { label: 'Inicio', href: '/' },
-  { label: 'Servicios', href: '/#servicios' },
-  { label: 'Catálogo', href: '/#catálogo' },
   { label: 'Nosotros', href: '/#nosotros' },
+  { label: 'Servicios', href: '/#servicios' },
 ];
 
 const Navbar = () => {
