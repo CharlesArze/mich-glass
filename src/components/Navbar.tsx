@@ -131,8 +131,20 @@ const Navbar = () => {
         </div>
 
         {/* Mobile hamburger */}
+        <div className="md:hidden flex items-center gap-2">
+          {isAuthenticated && user && (
+            <button
+              onClick={() => setOpen(v => !v)}
+              className="liquid-glass rounded-full px-2.5 py-1.5 flex items-center gap-2 text-white transition-colors"
+            >
+              <span className="w-5 h-5 rounded-full bg-white/20 flex items-center justify-center text-xs font-semibold">
+                {user.firstName?.[0]?.toUpperCase() || '?'}
+              </span>
+              <span className="text-xs font-medium font-body">{user.firstName}</span>
+            </button>
+          )}
         <button
-          className="md:hidden liquid-glass rounded-full p-2.5 text-white transition-colors"
+          className="liquid-glass rounded-full p-2.5 text-white transition-colors"
           onClick={() => setOpen(v => !v)}
           aria-label="Menú"
         >
@@ -148,6 +160,7 @@ const Navbar = () => {
             )}
           </AnimatePresence>
         </button>
+        </div>
       </nav>
 
       {/* Mobile panel */}
@@ -190,6 +203,12 @@ const Navbar = () => {
 
                 {isAuthenticated && user ? (
                   <>
+                    <div className="flex items-center gap-3 px-3 py-2 mb-1">
+                      <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm font-semibold text-white">
+                        {user.firstName?.[0]?.toUpperCase() || '?'}
+                      </span>
+                      <span className="text-sm font-medium text-white font-body">{user.firstName}</span>
+                    </div>
                     <Link to="/perfil" onClick={() => setOpen(false)}
                       className="flex items-center gap-2 px-3 py-3 text-base font-medium text-white/85 font-body rounded-xl transition-colors hover:bg-white/10">
                       <User size={16} />
