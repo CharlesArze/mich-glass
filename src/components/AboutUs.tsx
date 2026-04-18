@@ -24,7 +24,7 @@ const AboutUs = () => {
             alt=""
             className="w-full object-contain rounded-xl mb-6"
           />
-          <p className="text-2xl md:text-3xl lg:text-4xl font-heading italic text-white leading-[1.1] max-w-sm">
+          <p className="text-xl md:text-2xl font-heading italic text-white leading-[1.1] max-w-sm">
             "Un libro es un sueño que tienes en las manos."
           </p>
           <span className="mt-6 text-white/40 font-body font-light text-sm">
@@ -49,11 +49,8 @@ const AboutUs = () => {
           <p className="text-white/60 font-body font-light text-sm md:text-base mb-4">
             MICH nació con una misión simple: hacer que los libros sean accesibles para todos. Creemos que el conocimiento no debería tener barreras de precio ni de distancia.
           </p>
-          <p className="text-white/60 font-body font-light text-sm md:text-base mb-4">
-            Ofrecemos títulos nuevos a precios justos y libros de segunda mano cuidadosamente seleccionados, porque cada libro merece seguir siendo leído.
-          </p>
           <p className="text-white/60 font-body font-light text-sm md:text-base">
-            Contamos con libros nuevos y usados con garantía de calidad, envío a domicilio en Arequipa y a nivel nacional, y un catálogo actualizado con recomendaciones editoriales.
+            Ofrecemos títulos nuevos a precios justos y libros de segunda mano cuidadosamente seleccionados, porque cada libro merece seguir siendo leído.
           </p>
         </motion.div>
       </div>
