@@ -42,6 +42,10 @@ const HeroSection = () => {
       />
 
 
+      {/* Vignette bottom */}
+      <div className="absolute bottom-0 left-0 right-0 z-[1] pointer-events-none h-[80px] sm:h-[120px] md:h-[180px]"
+        style={{ background: "linear-gradient(to bottom, transparent, black)" }} />
+
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center h-full pt-[84px] md:pt-[105px] px-5 md:px-0">
         {/* Badge */}
