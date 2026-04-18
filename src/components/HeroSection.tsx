@@ -49,11 +49,8 @@ const HeroSection = () => {
       {/* Content */}
       <div className="relative z-10 flex flex-col items-center h-full pt-[84px] md:pt-[105px] px-5 md:px-0">
         {/* Badge */}
-        <div className="liquid-glass rounded-full px-1 py-1 flex items-center gap-2 mb-6 md:mb-8">
-          <span className="bg-white text-black rounded-full px-3 py-1 text-xs font-semibold font-body">
-            Nuevo
-          </span>
-          <span className="text-white text-xs font-medium font-body pr-3">
+        <div className="liquid-glass rounded-full px-4 py-2 flex items-center mb-6 md:mb-8">
+          <span className="text-white text-xs font-medium font-body">
             Envíos gratis en Arequipa
           </span>
         </div>
