@@ -18,131 +18,6 @@ const SORT_OPTIONS: { value: SortOption; label: string }[] = [
   { value: 'rating',    label: 'Mejor calificados' },
 ];
 
-const NUM_PAGES = 5;
-const FLIP_DURATION = 6; // segundos por ciclo completo
-
-const BookFlipAnimation = () => (
-  <>
-    <style>{`
-      @keyframes bookFloat {
-        0%, 100% { transform: translateY(0px); }
-        50%       { transform: translateY(-14px); }
-      }
-      @keyframes pageFlip {
-        0%, 14%   { transform: rotateY(0deg);    opacity: 1; }
-        48%        { transform: rotateY(-150deg); opacity: 1; }
-        82%        { transform: rotateY(-180deg); opacity: 1; }
-        83%        { transform: rotateY(-180deg); opacity: 0; }
-        84%, 99%   { transform: rotateY(0deg);    opacity: 0; }
-        100%       { transform: rotateY(0deg);    opacity: 1; }
-      }
-    `}</style>
-
-    <div style={{ animation: 'bookFloat 5s ease-in-out infinite', display: 'inline-block' }}>
-      <div style={{ perspective: '700px', perspectiveOrigin: '50% 40%' }}>
-        <div style={{
-          width: 260,
-          height: 190,
-          position: 'relative',
-          transform: 'rotateX(6deg)',
-          transformStyle: 'preserve-3d',
-        }}>
-
-          {/* Página izquierda (leídas) */}
-          <div style={{
-            position: 'absolute', left: 0, width: 128, height: 190,
-            background: 'rgba(255,255,255,0.07)',
-            backdropFilter: 'blur(18px)',
-            WebkitBackdropFilter: 'blur(18px)',
-            border: '1px solid rgba(255,255,255,0.13)',
-            borderRight: 'none',
-            borderRadius: '6px 0 0 6px',
-            boxShadow: 'inset 0 1px 0 rgba(255,255,255,0.12), -6px 12px 32px rgba(0,0,0,0.35)',
-          }}>
-            {[22,38,54,70,86,102,118,134,150].map(t => (
-              <div key={t} style={{
-                position: 'absolute', left: 14, right: 18, top: t,
-                height: 2, background: 'rgba(255,255,255,0.06)', borderRadius: 1,
-              }} />
-            ))}
-          </div>
-
-          {/* Lomo */}
-          <div style={{
-            position: 'absolute', left: 126, width: 8, height: 190,
-            background: 'linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06))',
-            zIndex: 20,
-          }} />
-
-          {/* Página derecha (por leer) */}
-          <div style={{
-            position: 'absolute', right: 0, width: 126, height: 190,
-            background: 'rgba(255,255,255,0.05)',
-            backdropFilter: 'blur(18px)',
-            WebkitBackdropFilter: 'blur(18px)',
-            border: '1px solid rgba(255,255,255,0.09)',
-            borderLeft: 'none',
-            borderRadius: '0 6px 6px 0',
-            boxShadow: '6px 12px 32px rgba(0,0,0,0.25)',
-          }}>
-            {[22,38,54,70,86,102,118,134,150].map(t => (
-              <div key={t} style={{
-                position: 'absolute', left: 18, right: 14, top: t,
-                height: 2, background: 'rgba(255,255,255,0.05)', borderRadius: 1,
-              }} />
-            ))}
-          </div>
-
-          {/* Páginas que se voltean */}
-          {Array.from({ length: NUM_PAGES }).map((_, i) => (
-            <div
-              key={i}
-              style={{
-                position: 'absolute',
-                left: 134,
-                width: 120,
-                height: 190,
-                transformOrigin: 'left center',
-                transformStyle: 'preserve-3d',
-                animation: `pageFlip ${FLIP_DURATION}s ease-in-out infinite`,
-                animationDelay: `${i * (FLIP_DURATION / NUM_PAGES)}s`,
-                zIndex: NUM_PAGES - i + 5,
-              }}
-            >
-              {/* Frente */}
-              <div style={{
-                position: 'absolute', inset: 0,
-                backfaceVisibility: 'hidden',
-                WebkitBackfaceVisibility: 'hidden',
-                background: 'rgba(255,255,255,0.09)',
-                border: '1px solid rgba(255,255,255,0.11)',
-                borderLeft: 'none',
-                borderRadius: '0 4px 4px 0',
-              }}>
-                {[22,38,54,70,86,102,118,134,150].map(t => (
-                  <div key={t} style={{
-                    position: 'absolute', left: 14, right: 12, top: t,
-                    height: 2, background: 'rgba(255,255,255,0.07)', borderRadius: 1,
-                  }} />
-                ))}
-              </div>
-              {/* Dorso */}
-              <div style={{
-                position: 'absolute', inset: 0,
-                backfaceVisibility: 'hidden',
-                WebkitBackfaceVisibility: 'hidden',
-                transform: 'rotateY(180deg)',
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.07)',
-                borderRadius: '0 4px 4px 0',
-              }} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  </>
-);
 
 const BookCardSkeleton = () => (
   <div className="flex flex-col animate-pulse">
@@ -182,14 +57,17 @@ const Libreria = () => {
       <section className="relative pt-24 pb-16 px-6 flex flex-col items-center justify-center min-h-[52vh] overflow-hidden">
         <div className="glow-spot w-[700px] h-[500px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
 
-        {/* Animación libro con páginas */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className="relative z-10 mb-10"
         >
-          <BookFlipAnimation />
+          <img
+            src="/video/50D84486-C5FD-4880-B7A6-5C3508EA7D9B_1_201_a.jpeg"
+            alt="Libro de cristal"
+            className="h-64 w-auto object-contain drop-shadow-2xl"
+          />
         </motion.div>
 
         <motion.div
