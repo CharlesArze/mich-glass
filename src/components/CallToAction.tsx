@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
@@ -24,13 +25,13 @@ const CallToAction = () => {
           </p>
 
           <div className="mt-10 flex items-center justify-center gap-4 flex-wrap">
-            <a
-              href="#catalog"
+            <Link
+              to="/libreria"
               className="inline-flex items-center gap-2 bg-white text-black rounded-full px-6 py-3 text-sm font-medium font-body transition-colors hover:bg-white/90"
             >
               Explorar librería
               <ArrowRight size={16} />
-            </a>
+            </Link>
             <a
               href="https://wa.me/51903576755"
               target="_blank"

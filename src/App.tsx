@@ -10,6 +10,8 @@ import Login from "./pages/login.tsx";
 import Registro from "./pages/registro.tsx";
 import Perfil from "./pages/perfil.tsx";
 import AdminLibros from "./pages/admin/libros.tsx";
+import Libreria from "./pages/libreria.tsx";
+import Libro from "./pages/libro.tsx";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +28,8 @@ const App = () => (
             <Route path="/registro" element={<Registro />} />
             <Route path="/perfil" element={<Perfil />} />
             <Route path="/admin/libros" element={<AdminLibros />} />
+            <Route path="/libreria" element={<Libreria />} />
+            <Route path="/libreria/:id" element={<Libro />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

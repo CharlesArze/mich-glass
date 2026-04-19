@@ -44,13 +44,13 @@ const Navbar = () => {
               {label}
             </a>
           ))}
-          <a
-            href="/#get-started"
+          <Link
+            to="/libreria"
             className="flex items-center gap-1 bg-white text-black rounded-full px-3.5 py-1.5 text-sm font-medium font-body transition-colors hover:bg-white/90"
           >
             Explorar librería
             <ArrowUpRight size={14} />
-          </a>
+          </Link>
         </div>
 
         {/* Auth — Desktop */}
@@ -190,14 +190,19 @@ const Navbar = () => {
 
                 <div className="h-px bg-white/10 my-2" />
 
-                <motion.a href="/#get-started" onClick={() => setOpen(false)}
+                <motion.div
                   initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.05 + NAV_LINKS.length * 0.05, duration: 0.25 }}
-                  className="flex items-center justify-between px-3 py-3 text-base font-medium text-white font-body rounded-xl transition-colors hover:bg-white/10"
                 >
-                  Explorar librería
-                  <ArrowUpRight size={16} />
-                </motion.a>
+                  <Link
+                    to="/libreria"
+                    onClick={() => setOpen(false)}
+                    className="flex items-center justify-between px-3 py-3 text-base font-medium text-white font-body rounded-xl transition-colors hover:bg-white/10"
+                  >
+                    Explorar librería
+                    <ArrowUpRight size={16} />
+                  </Link>
+                </motion.div>
 
                 <div className="h-px bg-white/10 my-2" />
 

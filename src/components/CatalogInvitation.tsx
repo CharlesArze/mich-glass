@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 const CatalogInvitation = () => {
@@ -33,13 +34,13 @@ const CatalogInvitation = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-10"
         >
-          <a
-            href="#catalog"
+          <Link
+            to="/libreria"
             className="inline-flex items-center gap-2 bg-white text-black rounded-full px-6 py-3 text-sm font-medium font-body transition-colors hover:bg-white/90"
           >
             Explorar librería
             <ArrowRight size={16} />
-          </a>
+          </Link>
         </motion.div>
       </div>
     </section>
