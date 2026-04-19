@@ -70,6 +70,9 @@ const Libreria = () => {
           />
         </motion.div>
 
+        {/* Degradado entre imagen y título */}
+        <div className="relative z-10 w-full max-w-md h-12 -my-2 bg-gradient-to-b from-black/30 via-black/10 to-transparent pointer-events-none" />
+
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
