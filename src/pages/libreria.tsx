@@ -83,6 +83,9 @@ const Libreria = () => {
             Cada libro que buscas está aquí. Nuevos y usados, enviados a todo el Perú.
           </p>
         </motion.div>
+
+        {/* Sombra de transición */}
+        <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-b from-transparent to-black/40 pointer-events-none z-20" />
       </section>
 
       <main className="px-6 pb-24 max-w-7xl mx-auto">
